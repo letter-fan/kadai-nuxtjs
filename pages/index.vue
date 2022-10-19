@@ -108,11 +108,13 @@ import firebase from "~/plugins/firebase";
 
 export default {
   name: "IndexPage",
-  data: () => ({
-    filter: null,
-    todos: [],
-    newLine: "",
-  }),
+  data() {
+    return {
+      filter: null,
+      todos: [],
+      newLine: "",
+    };
+  },
   computed: {
     filteredTodos() {
       if (this.filter === null) {
